@@ -19,12 +19,12 @@ test('2nd Round', async ({ loggedPage }) => {
   //await page.locator('div[onclick*="searchInNodeTree"]').click();
   await page.getByText('<Department> (default)').click();
   await page.locator('#tree-submit').click();
-  await page.locator('button[onclick*="selectFromTree(\'ParentId\'"]').click();
-  await page.locator('#SearchDevice').fill('contoso');
-  await page.locator('#SearchDevice').press('Enter');
+  //await page.locator('button[onclick*="selectFromTree(\'ParentId\'"]').click();
+  //await page.locator('#SearchDevice').fill('contoso');
+  //await page.locator('#SearchDevice').press('Enter');
   //await page.locator('div[onclick*="searchInNodeTree"]').click();
-  await page.locator('#nodeTree').getByText('Contoso (Sample)').first().click();
-  await page.locator('#tree-submit').click();
+  //await page.locator('#nodeTree').getByText('Contoso (Sample)').first().click();
+  //await page.locator('#tree-submit').click();
   await page.locator('fluent-button[form="CreateObjectForm"]').click();
  
 });
