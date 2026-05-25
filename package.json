@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report",
+    "install:browsers": "playwright install"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.1"
+    "@types/node": "^25.9.1",
+    "dotenv": "^16.1.4"
   }
 }
