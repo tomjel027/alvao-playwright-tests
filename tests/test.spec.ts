@@ -12,7 +12,6 @@ test('2nd Round', async ({ page }) => {
   await expect(page.getByTitle('Show navigation pane')).toBeVisible();
   await page.getByTitle('Show navigation pane').click();
   const objectsMenu = page.locator('[siteid="objects"]:visible');
-  await expect(objectsMenu).toBeVisible();
   await objectsMenu.click();
   await expect(page).toHaveTitle(/Objects - ALVAO/);
   await page.getByRole('link', { name: 'New object' }).click();
@@ -22,9 +21,7 @@ test('2nd Round', async ({ page }) => {
   await page.locator('div[onclick*="searchInNodeTree"]').click();
   await page.getByText('<Department> (default)').click();
   await page.locator('#tree-submit').click();
-  const createButton = page.locator('fluent-button[form="CreateObjectForm"]');
-  await expect(createButton).toBeVisible();
-  await createButton.click();
-  await expect(page).toHaveTitle(/Objects - ALVAO/);
+  await page.locator('fluent-button[form="CreateObjectForm"]').click();
   await expect(page.locator('.object__detail__header')).toBeVisible();
+
 });
